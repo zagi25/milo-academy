@@ -10,7 +10,7 @@
  * governing permissions and limitations under the License.
  */
 
-import { setLibs } from './utils.js';
+import { initSidekick, setLibs } from './utils.js';
 
 // Add project-wide style path here.
 const STYLES = '';
@@ -28,6 +28,7 @@ const CONFIG = {
   locales: {
     '': { ietf: 'en-US', tk: 'hah7vzn.css' },
     de: { ietf: 'de-DE', tk: 'hah7vzn.css' },
+    it: { ietf: 'it-IT', tk: 'hah7vzn.css' },
     kr: { ietf: 'ko-KR', tk: 'zfo3ouc' },
   },
 };
@@ -62,4 +63,5 @@ const miloLibs = setLibs(LIBS);
 
   setConfig({ ...CONFIG, miloLibs });
   await loadArea();
+  initSidekick();
 }());
